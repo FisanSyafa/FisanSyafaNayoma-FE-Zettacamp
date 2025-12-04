@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Zettacamp FE</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header class="hero-section">
+            <h1>Simple Pricing!</h1>
+            <p>The most advanced customer support tools with a simple and affordable pricing. And you can always try for 30 days, free!</p>
+        </header>
+
+        <section class="pricing-container">
+            <div class="card" onclick="selectCard(this)">
+                <div class="card-header">BASIC</div>
+                <div class="card-body">
+                    <div class="price"><sup>$</sup>4<span class="period">/month</span></div>
+                    <ul class="features">
+                        <li>10 Projects</li>
+                        <li>10 Pages</li>
+                        <li>100 Mb Disk Space</li>
+                    </ul>
+                    <button class="btn-buy" onclick="trigerAlert(event)">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="selectCard(this)">
+                <div class="card-header">STANDARD <span class="badge">Save 15%</span></div>
+                <div class="card-body">
+                    <div class="price"><sup>$</sup>8<span class="period">/month</span></div>
+                    <ul class="features">
+                        <li>20 Projects</li>
+                        <li>20 Pages</li>
+                        <li>200 Mb Disk Space</li>
+                    </ul>
+                    <button class="btn-buy" onclick="trigerAlert(event)">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="selectCard(this)">
+                <div class="card-header">ADVANCED</div>
+                <div class="card-body">
+                    <div class="price"><sup>$</sup>12<span class="period">/month</span></div>
+                    <ul class="features">
+                        <li>40 Projects</li>
+                        <li>40 Pages</li>
+                        <li>500 Mb Disk Space</li>
+                    </ul>
+                    <button class="btn-buy" onclick="trigerAlert(event)">BUY NOW</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Question</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How does free trial work?</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque facilisis sed odio eu rutrum. Mauris vitae lacus orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi venenatis lorem at pellentesque viverra.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I cancel any time?</h3>
+                    <p>Morbi interdum ligula mauris, et rhoncus nulla feugiat ut. Mauris non lectus vitae felis mollis tempus et ut nisi. Phasellus a ex id enim mattis auctor. Donec non semper sem. Nam at leo porttitor nisl vestibulum gravida.</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            function trigerAlert(element) {
+                event.stopPropagation();
+                alert("Success");
+            }
+
+            function selectCard(element){
+                document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+
+                element.classList.add('selected');
+            }
+        </script>
+    </body>
+</html>
